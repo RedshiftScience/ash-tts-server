@@ -31,40 +31,6 @@ RUN python3 get-pip.py
 RUN python3 -m pip install --upgrade pip
 
 
-WORKDIR /app
-
-
-# =================================
-# clone llama.cpp and build server
-# =================================
-RUN git clone https://github.com/RedshiftScience/llama.cpp ./LLM
-WORKDIR /app/LLM
-
-# last tested commit
-RUN git checkout 6b3ae4da92485f979a0f45774fcf68597634db0b
-
-# Set nvcc architecture
-ENV CUDA_DOCKER_ARCH=${CUDA_DOCKER_ARCH}
-# Enable cuBLAS
-ENV LLAMA_CUBLAS=1
-
-ENV LAMA_CUDA_DMMV_Y=2
-
-ENV LLAMA_CUDA_DMMV_X=64
-
-ENV CUDA_VISABLE_DEVICES=0
-
-# ENV CUDA_ARCHITECTURES=OFF
-
-ENV LLAMA_BUILD_SERVER=1
-
-RUN echo $CUDA_VISABLE_DEVICES && ls
-
-RUN make 
-
-
-WORKDIR /app
-
 
 # # =================================
 # # clone piper and install pip requirements
