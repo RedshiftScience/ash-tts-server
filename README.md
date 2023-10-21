@@ -6,7 +6,7 @@ Combined piperTTS+MangioRVC in a single docker container
 
 The above test were ran with the text-tts-rvc-gen-streaming.py example
 
-First you need enough ram on a GPU, suggest minnimum 12GB to have a somewhat real time experience.
+First you need enough ram on a GPU, suggest minnimum 6GB to have a somewhat real time experience.
 
 Then using docker pull to pull the ash-server
 
@@ -26,10 +26,7 @@ There is cli options ```--time``` for printing timings and ```--subtitles``` to 
 **Tested with**
 
 - RTX 3060 12GB VRAM (Local)
-  - 7b q4_0, 2048 ctx
 - RTX 3090 24GB VRAM (Runpod)
-  - 13b q6_K 4096 ctx
-
 
 **TODO**
 
