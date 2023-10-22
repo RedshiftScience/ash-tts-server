@@ -118,7 +118,7 @@ pip install .
 
 
 RUN . venv/bin/activate && \
- pip3 install torch torchaudio --extra-index-url https://download.pytorch.org/whl/cu118 && \
+ pip3 install --default-timeout=130 torch torchaudio --extra-index-url https://download.pytorch.org/whl/cu118 && \
  python3 -m pip install -r requirements.txt && \
  which python3
 
