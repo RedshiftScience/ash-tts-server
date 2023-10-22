@@ -10,13 +10,14 @@ max_tts_char_cfg = 500
 
 # ip configs
 
-llm_ip_cfg = "142.112.54.19"
+llm_ip_cfg = "127.0.0.1"
 llm_port_cfg = 43544
-ttts_ip_cfg = "142.112.54.19"
+ttts_ip_cfg = "127.0.0.1"
 ttts_port_cfg = 43472
 piper_ip_cfg = "127.0.0.1"
 piper_port_cfg = 50051
 rvc_ip_cfg = "127.0.0.1"
+
 rvc_port_cfg = 50052
 
 # llm configs
@@ -36,7 +37,7 @@ llama_cpp_mirostat_eta_cfg = 0.2
 
 piper_model_cfg = "ashera.ckpt"
 piper_noise_scale_cfg = 0.667
-piper_length_scale_cfg = 1.6
+piper_length_scale_cfg = 1.4
 piper_noise_scale_w_cfg = 0.8
 piper_speaker_id_cfg = 0
 
