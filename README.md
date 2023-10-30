@@ -15,11 +15,15 @@ Then using docker pull to pull the ash-server
 Then run using a model from Huggingface and checkpoints of your choice at any url for piper and RVC (These are the ones in the example I am using).
 You also need nvidia container toolkit installed for docker if you want to use your nvidia gpu.
 
-- ```docker run -it --name ash-tts-server -p 50051:50051  -p 50052:50052  ash-tts-server:latest "use_piper" "https://files.redshiftscience.com/api/public/dl/lMWjjCRp/rvcM/melba-toast.pth" "https://files.redshiftscience.com/api/public/dl/lMWjjCRp/piper/ashera.ckpt"```
+- ```docker run -d --name ash-tts-server  -p 50051:50051  -p 50052:50052  redshiftscience/ash-tts-server:latest "https://files.redshiftscience.com/api/public/dl/lMWjjCRp/rvcM/melba-toast.pth" "https://files.redshiftscience.com/api/public/dl/lMWjjCRp/piper/melba-toast2.ckpt"```
 
 - ```cd examples/```
 - ```pip install -r requirements.txt```
 - ```python text-tts-auto-rvc-gen-streaming.py```
+
+Form the webui and http api, run the webui script in the examples folder.
+- ```cd examples/```
+- ```python webui.py```
 
 There is cli options ```--time``` for printing timings and ```--subtitles``` to enable a subtitle window.
 
